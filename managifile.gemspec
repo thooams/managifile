@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rails', '>= 7.0.5'
 
   # Development dependencies
+  spec.add_development_dependency 'brakeman'
   spec.add_development_dependency 'overcommit'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-ast'
