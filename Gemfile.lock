@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     managifile (0.1.0)
+      active_storage_validations
       rails (>= 7.0.5)
 
 GEM
@@ -52,6 +53,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_storage_validations (1.0.4)
+      activejob (>= 5.2.0)
+      activemodel (>= 5.2.0)
+      activestorage (>= 5.2.0)
+      activesupport (>= 5.2.0)
     activejob (7.0.5)
       activesupport (= 7.0.5)
       globalid (>= 0.3.6)
@@ -177,6 +183,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.13.0)
+    shoulda-context (2.0.0)
     sqlite3 (1.6.3-x86_64-darwin)
     thor (1.2.2)
     timeout (0.3.2)
@@ -201,6 +208,7 @@ DEPENDENCIES
   rubocop-minitest
   rubocop-performance
   rubocop-rails
+  shoulda-context
   sqlite3
 
 BUNDLED WITH

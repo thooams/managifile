@@ -1,0 +1,28 @@
+require:
+  - rubocop-ast
+  - rubocop-minitest
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.2.2
+  NewCops: enable
+
+Style/ClassVars:
+  Enabled: true
+  Exclude:
+    - "lib/managifile/managifile_attachable.rb"
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - "test/dummy/db/**/*"
+
+Metrics/AbcSize:
+  Enabled: true
+  Exclude:
+    - "test/dummy/db/**/*"
+
+Metrics/MethodLength:
+  Enabled: true
+  Exclude:
+    - "test/dummy/db/**/*"

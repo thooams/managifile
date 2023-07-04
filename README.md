@@ -21,6 +21,15 @@ Or install it yourself as:
 $ gem install managifile
 ```
 
+
+
+## Usage
+
+```
+rails active_storage:install
+rails db:migrate
+```
+
 ## Contributing
 Contribution directions go here.
 

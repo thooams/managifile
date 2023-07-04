@@ -25,14 +25,9 @@ Gem::Specification.new do |spec|
     Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   end
 
+  spec.add_dependency 'active_storage_validations'
   spec.add_dependency 'rails', '>= 7.0.5'
 
   # Development dependencies
-  spec.add_development_dependency 'brakeman'
-  spec.add_development_dependency 'overcommit'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'rubocop-ast'
-  spec.add_development_dependency 'rubocop-minitest'
-  spec.add_development_dependency 'rubocop-performance'
-  spec.add_development_dependency 'rubocop-rails'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
