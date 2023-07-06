@@ -2,12 +2,15 @@ PATH
   remote: .
   specs:
     managifile (0.1.0)
+      aasm
       active_storage_validations
       rails (>= 7.0.5)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (5.5.0)
+      concurrent-ruby (~> 1.0)
     actioncable (7.0.5)
       actionpack (= 7.0.5)
       activesupport (= 7.0.5)

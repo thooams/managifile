@@ -4,6 +4,7 @@ require 'managifile/version'
 require 'active_storage_validations'
 require 'managifile/railtie'
 require 'managifile/managifile_attachable'
+require 'aasm'
 
 # Managifile module to manage your files
 module Managifile

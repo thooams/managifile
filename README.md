@@ -27,6 +27,7 @@ $ gem install managifile
 
 ```
 rails active_storage:install
+rails generate aasm document
 rails db:migrate
 ```
 

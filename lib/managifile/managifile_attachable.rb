@@ -46,13 +46,37 @@ module Managifile
     end
 
     included do
+      # aasm_state for the model
+      include AASM
+
+      # Attach files to the model
       has_many_attached class_variable_get(:@@file_attribute)
 
+      # Validation of
       validates class_variable_get(:@@file_attribute),
                 content_type: class_variable_get(:@@file_content_type),
                 size: { less_than: class_variable_get(:@@file_size_limit) },
                 limit: { min: class_variable_get(:@@file_number_limit_min),
                          max: class_variable_get(:@@file_number_limit_max) }
+
+      # Defined several states for the model
+      aasm do
+        state :draft, initial: true
+        state :published
+        state :shared
+
+        event :publish do
+          transitions from: :draft, to: :published
+        end
+
+        event :drafting do
+          transitions from: %i[published shared], to: :draft
+        end
+
+        event :share do
+          transitions from: %i[draft published], to: :shared
+        end
+      end
     end
   end
 end
