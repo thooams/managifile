@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     managifile (0.1.0)
-      aasm
-      active_storage_validations
+      aasm (~> 5.5.0)
+      active_storage_validations (~> 1.0.4)
       rails (>= 7.0.5)
 
 GEM

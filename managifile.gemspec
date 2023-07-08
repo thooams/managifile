@@ -25,8 +25,8 @@ Gem::Specification.new do |spec|
     Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   end
 
-  spec.add_dependency 'aasm'
-  spec.add_dependency 'active_storage_validations'
+  spec.add_dependency 'aasm', '~> 5.5.0'
+  spec.add_dependency 'active_storage_validations', '~> 1.0.4'
   spec.add_dependency 'rails', '>= 7.0.5'
 
   # Development dependencies
