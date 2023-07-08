@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_230_704_150_835) do
+ActiveRecord::Schema[7.0].define(version: 20_230_708_083_032) do
   create_table 'active_storage_attachments', force: :cascade do |t|
     t.string 'name', null: false
     t.string 'record_type', null: false
@@ -47,6 +47,16 @@ ActiveRecord::Schema[7.0].define(version: 20_230_704_150_835) do
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.string 'aasm_state'
+  end
+
+  create_table 'versions', force: :cascade do |t|
+    t.string 'item_type', null: false
+    t.bigint 'item_id', null: false
+    t.string 'event', null: false
+    t.string 'whodunnit'
+    t.text 'object', limit: 1_073_741_823
+    t.datetime 'created_at'
+    t.index %w[item_type item_id], name: 'index_versions_on_item_type_and_item_id'
   end
 
   add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'

@@ -1,39 +1,39 @@
 # frozen_string_literal: true
 
-# Managifile module to manage your files
+# Managifile module to manage your file
 module Managifile
-  # ManagifileAttachable module to manage your files
+  # ManagifileAttachable module to manage your file
   module ManagifileAttachable
     extend ActiveSupport::Concern
     include ActiveModel::Validations
 
     class_methods do
-      @@file_attribute = :files
+      @@file_attribute = :file
       @@file_content_type = %i[pdf doc csv].freeze
       @@file_number_limit_max = 2
       @@file_number_limit_min = 0
       @@file_size_limit = 5_000_000 # ~= 5.megabytes
 
-      ## Sets up the model to be able to manage files
+      ## Sets up the model to be able to manage file
       #
       # @example
       #  class Document < ApplicationRecord
       #    include Managifile::ManagifileAttachable
-      #    managifile_attachable attribute: :files
+      #    managifile_attachable attribute: :file
       #    # or
-      #    managifile_attachable attribute: :files, content_types: %i[pdf doc csv]
+      #    managifile_attachable attribute: :file, content_types: %i[pdf doc csv]
       #    # or
-      #    managifile_attachable attribute: :files, content_types: %i[pdf doc csv],
+      #    managifile_attachable attribute: :file, content_types: %i[pdf doc csv],
       #                          number_limit_max: 2, number_limit_min: 0,
       #                          size_limit: 5_000_000
       #    end
       #
       #
-      # @params attribute [Symbol] the attribute name to use for the files
+      # @params attribute [Symbol] the attribute name to use for the file
       # @params content_types [Array] the content types to allow
-      # @params number_limit_max [Integer] the maximum number of files allowed
-      # @params number_limit_min [Integer] the minimum number of files allowed
-      # @params size_limit [Integer] the maximum size of the files allowed
+      # @params number_limit_max [Integer] the maximum number of file allowed
+      # @params number_limit_min [Integer] the minimum number of file allowed
+      # @params size_limit [Integer] the maximum size of the file allowed
       # @return [void]
       def managifile_attachable(attribute: nil, content_types: nil,
                                 number_limit_max: nil, number_limit_min: nil, size_limit: nil)
@@ -49,8 +49,11 @@ module Managifile
       # aasm_state for the model
       include AASM
 
-      # Attach files to the model
+      # Attach file to the model
       has_many_attached class_variable_get(:@@file_attribute)
+
+      # Add versionning to the model
+      has_paper_trail only: :name
 
       # Validation of
       validates class_variable_get(:@@file_attribute),
