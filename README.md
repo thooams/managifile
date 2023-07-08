@@ -29,6 +29,7 @@ $ gem install managifile
 rails active_storage:install
 rails generate aasm [model]
 rails paper_trail:install
+rails generate pundit:install
 rails db:migrate
 ```
 

@@ -4,7 +4,8 @@ PATH
     managifile (0.1.0)
       aasm (~> 5.5.0)
       active_storage_validations (~> 1.0.4)
-      paper_trail
+      paper_trail (~> 14.0.0)
+      pundit (~> 2.3.0)
       rails (>= 7.0.5)
 
 GEM
@@ -133,6 +134,8 @@ GEM
       racc
     puma (6.3.0)
       nio4r (~> 2.0)
+    pundit (2.3.0)
+      activesupport (>= 3.0.0)
     racc (1.7.1)
     rack (2.2.7)
     rack-test (2.1.0)

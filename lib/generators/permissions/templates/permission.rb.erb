@@ -1,0 +1,36 @@
+# frozen_string_literal: true
+
+# Permission model to model the rights of a user on a model
+class Permission < ApplicationRecord
+  # If array is empty, all rights are prohibited
+  serialize :rights, Array
+
+  DEFAULT_RIGHTS = %i[show create update destroy].freeze
+
+  # Relations
+  belongs_to :user
+  belongs_to :<%= name.downcase %>
+
+  # Scopes
+
+  # Validations
+
+  # Callbacks
+  before_validation :set_default_rights, on: :create
+
+  # Methods
+  # Macros for rights
+  # update?, destroy?, create?, show?
+  DEFAULT_RIGHTS.each do |right|
+    define_method "\#{right}?" do
+      rights.include?(right)
+    end
+  end
+
+  private
+
+  # Set default rights to be database agnostic
+  def set_default_rights
+    self.rights = DEFAULT_RIGHTS if rights.blank?
+  end
+end

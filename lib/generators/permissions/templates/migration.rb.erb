@@ -1,0 +1,10 @@
+class CreatePermissions < ActiveRecord::Migration[<%=  ActiveRecord::VERSION::STRING.to_f %>]
+  def change
+    create_table(:permissions) do |t|
+      t.belongs_to :user, index: true
+      t.belongs_to :<%= name %>, index: true
+      t.text :rights, default: [].to_yaml
+      t.timestamps null: false
+    end
+  end
+end

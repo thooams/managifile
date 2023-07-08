@@ -1,0 +1,32 @@
+# frozen_string_literal: true
+
+class <%= name.classify %>Policy < ApplicationPolicy
+  attr_reader :user, :<%= name.downcase %>
+
+  def initialize(user, <%= name.downcase %>)
+    @user = user
+    @<%= name.downcase %> = <%= name.downcase %>
+  end
+
+  def update?
+    user_permissions.update?
+  end
+
+  def create?
+    user_permissions.create?
+  end
+
+  def show?
+    user_permissions.show?
+  end
+
+  def destroy?
+    user_permissions.destroy?
+  end
+
+  private
+
+  def user_permissions
+    @<%= name.downcase %>.permissions.find_by(user_id: user.id)
+  end
+end
