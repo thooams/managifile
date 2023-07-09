@@ -12,6 +12,6 @@ class AasmGeneratorTest < Rails::Generators::TestCase
   test 'generate aasm migration' do
     run_generator %w[documento]
 
-    assert_migration 'db/migrate/add_aasm_state_to_documentos.rb', /def change/
+    assert_migration 'db/migrate/aasm_create_documentos.rb', /def change/
   end
 end

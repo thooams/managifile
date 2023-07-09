@@ -51,6 +51,7 @@ module Managifile
 
       # Attach files to the model
       has_many_attached class_variable_get(:@@file_attribute)
+      has_many :permissions
 
       # Add versionning to the model
       has_paper_trail

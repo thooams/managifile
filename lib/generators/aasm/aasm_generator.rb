@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
-require 'rails/generators/named_base'
+require 'rails/generators/active_record'
+require 'aasm'
 
 module Managifile
   module Generators
     # Generate Managifile install
-    class AasmGenerator < Rails::Generators::NamedBase
+    class AasmGenerator < ActiveRecord::Generators::Base
       def install_aasm
-        log :rails_command, "aasm #{name}"
-        invoke 'active_record::aasm', [name]
+        log :generate, "active_record:aasm #{name}"
+        invoke 'active_record:aasm', [name]
       end
     end
   end
