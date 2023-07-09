@@ -10,7 +10,8 @@ Gem::Specification.new do |spec|
   spec.email       = ['thomas@hummel.link']
   spec.homepage    = 'https://github.com/thooams/managifile'
   spec.summary     = 'Manage your files with Managifile.'
-  spec.description = 'This Gem allow yout to manage your file quickly with a restrictions, statuses, version, ...'
+  spec.description = 'This Gem allow yout to manage your file quickly with a restrictions,
+    statuses, versionning, permissions, ...'
   spec.license     = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"

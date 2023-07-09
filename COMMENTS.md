@@ -10,16 +10,14 @@ Le but, c'est de créer une gem qui permet de configurer l'attribut d'un model c
 ## Feedback
 
 - La réponse au besoin est présente dans cette gem, mais il aurait été plus
-  judicieux de pouvoir créér un model "Document" par exemple à travers la gem pour mieux
+  judicieux de pouvoir créér un model, "Document" par exemple, à travers la gem pour mieux
   maitriser la notion de versionning, de status, de droits pour chacun des
-  documments que l’on souhaite ajouter.
+  documments que l’on souhaite uploader.
 
 ## Les amiliorations de la gem
 
 - Mettre en place un système plus fin pour activer l’une ou l’autre des
   fonctionnalités prévu pour la gem. Pour cela il faut :
-  - [ ] Mettre un système pour activer l’une ou l’autre des fonctionalité sur le
-    fichier managifile_attachable
+  - [ ] Mettre un système pour activer l’une ou l’autre des fonctionalités sur le
+    fichier managifile_attachable.rb
   - [x] Créer des générateurs par fonctionnalité
-
-

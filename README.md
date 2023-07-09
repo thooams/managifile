@@ -1,14 +1,11 @@
 # Managifile
 Short description and motivation.
 
-## Usage
-How to use my plugin.
-
 ## Installation
-Add this line to your application's Gemfile:
+Add this line to your Rails application's Gemfile:
 
 ```ruby
-gem "managifile"
+gem "managifile", github: "thooams/managifile"
 ```
 
 And then execute:
@@ -16,10 +13,6 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install managifile
-```
 
 ```
 rails g managifile your_model_name # eq. rails g managifile document
