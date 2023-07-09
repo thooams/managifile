@@ -6,9 +6,7 @@ module Managifile
   module Generators
     # Generate Managifile install
     class PaperTrailGenerator < Rails::Generators::NamedBase
-      argument :name, type: :string
-
-      def install_aasm
+      def install_paper_trail
         log :generate, 'paper_trail:install'
         invoke 'paper_trail:install'
       end

@@ -4,7 +4,7 @@ require 'test_helper'
 
 require 'generators/permissions/permissions_generator'
 
-class ManagifieGeneratorTest < Rails::Generators::TestCase
+class PermissionsGeneratorTest < Rails::Generators::TestCase
   tests Managifile::Generators::PermissionsGenerator
   destination File.expand_path('../tmp', __dir__)
   setup :prepare_destination

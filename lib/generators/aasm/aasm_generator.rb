@@ -6,13 +6,9 @@ module Managifile
   module Generators
     # Generate Managifile install
     class AasmGenerator < Rails::Generators::NamedBase
-      require 'aasm'
-
-      argument :name, type: :string
-
       def install_aasm
-        log :generate, "aasm #{name}"
-        invoke 'aasm', name
+        log :rails_command, "aasm #{name}"
+        invoke 'active_record::aasm', [name]
       end
     end
   end

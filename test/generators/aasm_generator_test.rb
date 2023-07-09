@@ -4,7 +4,7 @@ require 'test_helper'
 
 require 'generators/aasm/aasm_generator'
 
-class ManagifieGeneratorTest < Rails::Generators::TestCase
+class AasmGeneratorTest < Rails::Generators::TestCase
   tests Managifile::Generators::AasmGenerator
   destination File.expand_path('../tmp', __dir__)
   setup :prepare_destination

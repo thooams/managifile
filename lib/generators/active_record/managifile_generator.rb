@@ -7,11 +7,7 @@ module ActiveRecord
   module Generators
     # Generate managifile code for a model
     class ManagifileGenerator < ActiveRecord::Generators::Base
-      # argument :attributes, type: :array, default: [], banner: "field:type field:type"
-      argument :name, type: :string, desc: 'Name of model (ex: user)'
-
       include Managifile::Generators::OrmHelpers
-      namespace 'active_record:managifile'
 
       def generate_model
         invoke 'active_record:model', [name], migration: false unless model_exists? && behavior == :invoke

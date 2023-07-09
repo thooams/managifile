@@ -4,7 +4,7 @@ require 'rails/generators/active_record'
 
 module Managifile
   module Generators
-    # Generate Managifile install
+    # Generate Pundit install
     class PunditGenerator < ActiveRecord::Generators::Base
       source_root File.expand_path('templates', __dir__)
 

@@ -4,7 +4,7 @@ require 'test_helper'
 
 require 'generators/pundit/pundit_generator'
 
-class ManagifieGeneratorTest < Rails::Generators::TestCase
+class PunditGeneratorTest < Rails::Generators::TestCase
   tests Managifile::Generators::PunditGenerator
   destination File.expand_path('../tmp', __dir__)
   setup :prepare_destination
