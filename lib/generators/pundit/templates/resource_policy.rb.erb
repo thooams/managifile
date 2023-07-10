@@ -16,13 +16,16 @@ class <%= name.classify %>Policy < ApplicationPolicy
     user_permissions.create?
   end
 
-  def show?
-    user_permissions.show?
+  def read?
+    user_permissions.read?
   end
 
-  def destroy?
-    user_permissions.destroy?
+  def delete?
+    user_permissions.delete?
   end
+
+  alias_method :show?, :read?
+  alias_method :destroy?, :delete?
 
   private
 

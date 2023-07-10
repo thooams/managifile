@@ -9,7 +9,7 @@ class Permission < ApplicationRecord
 
   # Relations
   belongs_to :user
-  belongs_to :<%= name.downcase %>
+  belongs_to :document
 
   # Scopes
 
@@ -20,7 +20,7 @@ class Permission < ApplicationRecord
 
   # Methods
   # Macros for rights
-  # update?, destroy?, create?, show?
+  # update?, delete?, create?, read?
   DEFAULT_RIGHTS.each do |right|
     define_method "#{right}?" do
       rights.include?(right)

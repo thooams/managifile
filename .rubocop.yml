@@ -25,4 +25,7 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Enabled: true
   Exclude:
-    - "test/dummy/db/**/*"
+    - "test/**/*"
+
+Minitest/MultipleAssertions:
+  Enabled: false

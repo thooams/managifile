@@ -51,6 +51,8 @@ module Managifile
 
       # Attach files to the model
       has_many_attached class_variable_get(:@@file_attribute)
+
+      # Add permissions to the model
       has_many :permissions
 
       # Add versionning to the model
