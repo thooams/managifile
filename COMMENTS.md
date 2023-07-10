@@ -22,3 +22,13 @@ Le but, c'est de créer une gem qui permet de configurer l'attribut d'un model c
     fichier managifile_attachable.rb
   - [ ] Mettre en place un système qui installe les gems au besoin/ à la demande.
   - [x] Créer des générateurs par fonctionnalité
+
+## Améliorations futures
+- Vérifier le contenu du document
+- Vérifier si le document n’est pas un virus
+- Cryptage du fichier bout en bout
+- Notion de temps de partage de fichiers
+- Signature de document
+- Modification de document
+- Création de document
+- ...
