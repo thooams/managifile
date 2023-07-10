@@ -20,4 +20,5 @@ Le but, c'est de créer une gem qui permet de configurer l'attribut d'un model c
   fonctionnalités prévu pour la gem. Pour cela il faut :
   - [ ] Mettre un système pour activer l’une ou l’autre des fonctionalités sur le
     fichier managifile_attachable.rb
+  - [ ] Mettre en place un système qui installe les gems au besoin/ à la demande.
   - [x] Créer des générateurs par fonctionnalité
